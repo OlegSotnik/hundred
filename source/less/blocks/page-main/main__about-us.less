@@ -1,0 +1,224 @@
+.main__about-us {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-us__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: start;
+  width: 88%;
+  margin: 0 auto;
+  padding: 35px 0;
+
+  @media (min-width: @tablet_width) {
+    grid-template-areas:
+      "image   heading"
+      "image   list";
+    grid-template-columns: 33% 67%;
+    padding: 40px 0;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: calc(~'30% + 624px');
+    padding: 45px 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: calc(~'35% + 763px');
+    padding: 60px 0;
+  }
+}
+
+.about-us__heading {
+  width: 100%;
+  text-align: center;
+  color: @basic_blue;
+  margin: 0;
+
+  @media (min-width: @tablet_width) {
+    grid-area: heading;
+  }
+}
+
+.about-us__image {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 281px;
+  margin: 25px 0 0 0;
+
+  @media (min-width: @modile_xl_width) {
+    width: 350px;
+    margin: 30px 0 0 0;
+  }
+
+  @media (min-width: @tablet_width) {
+    grid-area: image;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    width: min-content;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+.about-us__image-developer {
+  border-radius: 50%;
+  border: 5px solid @special_blue;
+  min-width: 158px;
+  min-height: 158px;
+  margin-left: -20px;
+
+  @media (min-width: @modile_xl_width) {
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  @media (min-width: @tablet_width) {
+    margin: -25px 0 0 0;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin: -40px 0 0 30px;
+    width: 260px;
+    height: 260px;
+    border: 6px solid @special_blue;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: -50px 0 0 40px;
+    width: 310px;
+    height: 310px;
+  }
+}
+
+.about-us__image-designer {
+  border-radius: 50%;
+  border: 5px solid @special_pink;
+  min-width: 123px;
+  min-height: 123px;
+
+  @media (min-width: @modile_xl_width) {
+    min-width: 160px;
+    min-height: 160px;
+  }
+
+  @media (min-width: @tablet_width) {
+    width: 160px;
+    height: 160px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 200px;
+    height: 200px;
+    border: 6px solid @special_pink;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.about-us__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @modile_xl_width) {
+    margin: 25px 0 0 0;
+  }
+
+  @media (min-width: @tablet_width) {
+    grid-area: list;
+    margin: 30px 0 0 0;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin: 35px 0 0 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 40px 0 0 0;
+  }
+}
+
+.about-us__item {
+  position: relative;
+  width: calc(~'100% - 20px');
+  margin: 0 10px 0 20px;
+
+  .font-normal;
+  font-size: .9em;
+  line-height: 1.3em;
+  color: @basic_gray;
+  text-align: justify;
+
+  @media (min-width: @modile_xl_width) {
+    margin: 0 12px 0 24px;
+
+    font-size: 1.1em;
+    line-height: 1.35em;
+  }
+
+  @media (min-width: @tablet_width) {
+    width: calc(~'100% - 35px');
+    margin: 0 0 0 35px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: calc(~'100% - 40px');
+    margin: 0 0 0 40px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: calc(~'100% - 50px');
+    margin: 0 0 0 50px;
+
+    font-size: 1.2em;
+  }
+}
+
+.about-us__item:not(:nth-child(1)) {
+  margin-top: 20px;
+
+  @media (min-width: @modile_xl_width) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin: 35px 0 0 40px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 40px 0 0 50px;
+  }
+}
+
+.about-us__item::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: @basic_blue;
+  border-radius: 50%;
+  top: 9px;
+  left: -14px;
+
+  @media (min-width: @modile_xl_width) {
+    width: 6px;
+    height: 6px;
+    top: 10px;
+  }
+}
