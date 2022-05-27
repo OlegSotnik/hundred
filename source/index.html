@@ -347,78 +347,86 @@
     <section class="main__feedback" id="feedback">
       <div class="feedback__container">
         <h2 class="feedback__heading main__h2">Отзывы</h2>
-        <div class="feedback__slider">
-          <div class="feedback__mask">
-            <ul class="feedback__slider-list">
-              <li class="feedback__slider-item feedback__slider-item--image-1">
-                <div class="feedback__box-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/image-1.webp 1x, img/image-1@2x.webp 2x">
-                    <img class="feedback__image" src="img/image-1.png" srcset="img/image-1@2x.png 2x" width="112"
-                      height="112" alt="Макет мобильной версии сайта">
-                  </picture>
-                </div>
-                <h3 class="feedback__name">Дмитрий Смирнов</h3>
-                <p class="feedback__text">Спасибо вам за качественно выполненную работу! Все понравилось, от первого
-                  звонка до сдачи работы. Остались довольны на всех этапах. Нам нужен был сайт для привлечения клиентов.
-                  Был запущен в оговоренные сроки. Судя по статистике, уже начал приносить первую прибыль. Спасибо! Удачи вам!</p>
-              </li>
-              <li class="feedback__slider-item feedback__slider-item--image-2">
-                <div class="feedback__box-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/image-2.webp 1x, img/image-2@2x.webp 2x">
-                    <img class="feedback__image" src="img/image-2.png" srcset="img/image-2@2x.png 2x" width="112"
-                      height="112" alt="Макет планшетной версии сайта">
-                  </picture>
-                </div>
-                <h3 class="feedback__name">Мария Школьник</h3>
-                <p class="feedback__text">Я мама в декрете, решила заняться продажей вязанных изделий. Общалась с милой девушкой,
-                   которая сразу мне понравилась своей тактичностью, профессиональным подходом. Ответили на все мои
-                  вопросы. Сайт получился красивый и удобный, что теперь думаю о дальнейшем развитии своего маленького
-                  бизнеса, так как пошли клиенты именно с сайта. До этого вела только соцсети.</p>
-              </li>
-              <li class="feedback__slider-item feedback__slider-item--image-3">
-                <div class="feedback__box-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/image-3.webp 1x, img/image-3@2x.webp 2x">
-                    <img class="feedback__image" src="img/image-3.png" srcset="img/image-3@2x.png 2x" width="112"
-                      height="112" alt="Макет десктопной версии сайта">
-                  </picture>
-                </div>
-                <h3 class="feedback__name">Иван Зубов</h3>
-                <p class="feedback__text">Ответственные и творческие специалисты, сроки соблюдены. Цены адекватные.
-                  Единственное мне не понравилось, первый отклик на обращение был не таким быстрым как хотелось бы.
-                  Общался со мной только один человек, может так и надо. В целом все шикарно! Мои клиенты сразу заметили что у нас
-                  появился сайт, даже спрашивали кто делал.</p>
-              </li>
-              <li class="feedback__slider-item feedback__slider-item--image-4">
-                <div class="feedback__box-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/image-4.webp 1x, img/image-4@2x.webp 2x">
-                    <img class="feedback__image" src="img/image-4.png" srcset="img/image-4@2x.png 2x" width="112"
-                      height="112" alt="Макет планшетной версии сайта">
-                  </picture>
-                </div>
-                <h3 class="feedback__name">Оксана Володько</h3>
-                <p class="feedback__text">Спасибо огромное вашей команде! Я настолько довольна выполненной работой,
-                   что эмоции переполняют! Готова хвалиться всем и каждому! Вы волшебники, поняли меня с полуслова)
-                  Конечно я заполняла техническое задание, но на всех этапах, даже здесь, мне подсказывали) Я очень надеюсь,
-                   что теперь мы будем дальше успешно сотрудничать, ведь нужно продвигать сайт!</p>
-              </li>
-              <li class="feedback__slider-item feedback__slider-item--image-5">
-                <div class="feedback__box-image">
-                  <picture>
-                    <source type="image/webp" srcset="img/image-5.webp 1x, img/image-5@2x.webp 2x">
-                    <img class="feedback__image" src="img/image-5.png" srcset="img/image-4-5@2x.png 2x" width="112"
-                      height="112" alt="Макет десктопной версии сайта">
-                  </picture>
-                </div>
-                <h3 class="feedback__name">Степан Лукин</h3>
-                <p class="feedback__text">Здравствуйте! Первое общение было приятным, обсудили все детали заказа.
-                  Работать было комфортно и легко, по срокам выдержали. На все запросы реагировали быстро. Спасибо! </p>
-              </li>
-            </ul>
-          </div>
+        <div class="feedback__slider-box">
+          <input class="feedback__radio-button" type="radio" name="position" />
+          <input class="feedback__radio-button" type="radio" name="position" />
+          <input class="feedback__radio-button" type="radio" name="position" checked />
+          <input class="feedback__radio-button" type="radio" name="position" />
+          <input class="feedback__radio-button" type="radio" name="position" />
+          <ul class="feedback__slider-list">
+            <li class="feedback__slider-item feedback__slider-item--image-1">
+              <div class="feedback__box-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image-1.webp 1x, img/image-1@2x.webp 2x">
+                  <img class="feedback__image" src="img/image-1.png" srcset="img/image-1@2x.png 2x" width="112"
+                    height="112" alt="Макет мобильной версии сайта">
+                </picture>
+              </div>
+              <h3 class="feedback__name">Дмитрий Смирнов</h3>
+              <p class="feedback__text">Спасибо вам за качественно выполненную работу! Все понравилось, от первого
+                звонка до сдачи работы. Остались довольны на всех этапах. Нам нужен был сайт для привлечения клиентов.
+                Был запущен в оговоренные сроки. Судя по статистике, уже начал приносить первую прибыль. Спасибо! Удачи
+                вам!</p>
+            </li>
+            <li class="feedback__slider-item feedback__slider-item--image-2">
+              <div class="feedback__box-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image-2.webp 1x, img/image-2@2x.webp 2x">
+                  <img class="feedback__image" src="img/image-2.png" srcset="img/image-2@2x.png 2x" width="112"
+                    height="112" alt="Макет планшетной версии сайта">
+                </picture>
+              </div>
+              <h3 class="feedback__name">Мария Школьник</h3>
+              <p class="feedback__text">Я мама в декрете, решила заняться продажей вязанных изделий. Общалась с милой
+                девушкой,
+                которая сразу мне понравилась своей тактичностью, профессиональным подходом. Ответили на все мои
+                вопросы. Сайт получился красивый и удобный, что теперь думаю о дальнейшем развитии своего маленького
+                бизнеса, так как пошли клиенты именно с сайта. До этого вела только соцсети.</p>
+            </li>
+            <li class="feedback__slider-item feedback__slider-item--image-3">
+              <div class="feedback__box-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image-3.webp 1x, img/image-3@2x.webp 2x">
+                  <img class="feedback__image" src="img/image-3.png" srcset="img/image-3@2x.png 2x" width="112"
+                    height="112" alt="Макет десктопной версии сайта">
+                </picture>
+              </div>
+              <h3 class="feedback__name">Иван Зубов</h3>
+              <p class="feedback__text">Ответственные и творческие специалисты, сроки соблюдены. Цены адекватные.
+                Единственное мне не понравилось, первый отклик на обращение был не таким быстрым как хотелось бы.
+                Общался со мной только один человек, может так и надо. В целом все шикарно! Мои клиенты сразу заметили
+                что
+                у нас
+                появился сайт, даже спрашивали кто делал.</p>
+            </li>
+            <li class="feedback__slider-item feedback__slider-item--image-4">
+              <div class="feedback__box-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image-4.webp 1x, img/image-4@2x.webp 2x">
+                  <img class="feedback__image" src="img/image-4.png" srcset="img/image-4@2x.png 2x" width="112"
+                    height="112" alt="Макет планшетной версии сайта">
+                </picture>
+              </div>
+              <h3 class="feedback__name">Оксана Володько</h3>
+              <p class="feedback__text">Спасибо огромное вашей команде! Я настолько довольна выполненной работой,
+                что эмоции переполняют! Готова хвалиться всем и каждому! Вы волшебники, поняли меня с полуслова)
+                Конечно я заполняла техническое задание, но на всех этапах, даже здесь, мне подсказывали) Я очень
+                надеюсь,
+                что теперь мы будем дальше успешно сотрудничать, ведь нужно продвигать сайт!</p>
+            </li>
+            <li class="feedback__slider-item feedback__slider-item--image-5">
+              <div class="feedback__box-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image-5.webp 1x, img/image-5@2x.webp 2x">
+                  <img class="feedback__image" src="img/image-5.png" srcset="img/image-4-5@2x.png 2x" width="112"
+                    height="112" alt="Макет десктопной версии сайта">
+                </picture>
+              </div>
+              <h3 class="feedback__name">Степан Лукин</h3>
+              <p class="feedback__text">Здравствуйте! Первое общение было приятным, обсудили все детали заказа.
+                Работать было комфортно и легко, по срокам выдержали. На все запросы реагировали быстро. Спасибо! </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
