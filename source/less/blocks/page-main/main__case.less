@@ -13,6 +13,9 @@
   padding: 35px 0;
 
   @media (min-width: @tablet_width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 40px 0;
   }
 
@@ -43,32 +46,25 @@
   border-radius: 10px;
 
   @media (min-width: @tablet_width) {
+    width: 46%;
     border: 1.5px solid @special_blue;
     border-radius: 15px;
+    margin: 30px 0 0 0;
   }
 
   @media (min-width: @laptop_width) {
     border: 2px solid @special_blue;
     border-radius: 17px;
+    margin: 35px 0 0 0;
   }
 
   @media (min-width: @desktop_width) {
-  }
+    margin: 45px 0 0 0;}
 }
 
 .case__box--easy {
-  margin: 25px 0 35px 0;
-
-  @media (min-width: @tablet_width) {
-    margin: 30px 0 40px 0;
-  }
-
-  @media (min-width: @laptop_width) {
-    margin: 35px 0 45px 0;
-  }
-
-  @media (min-width: @desktop_width) {
-    margin: 45px 0 60px 0;
+  @media (max-width: @mobile_width_only) {
+    margin: 25px 0 35px 0;
   }
 }
 
@@ -82,11 +78,17 @@
   background-color: @special_blue;
   border-radius: 10px;
 
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    height: 85px;
+  }
+
   @media (min-width: @tablet_width) {
+    width: 101%;
     border-radius: 15px;
   }
 
   @media (min-width: @laptop_width) {
+    height: 85px;
     border-radius: 17px;
   }
 }
@@ -99,6 +101,19 @@
   font-size: 1.2em;
   line-height: 1.4em;
   color: @basic_black;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.4em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
 }
 
 .case__h3::before {
@@ -110,6 +125,21 @@
   height: 45px;
   background-size: auto 100%;
   background-repeat: no-repeat;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    top: -9px;
+    width: 36px;
+    height: 49px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 38px;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: -7px;
+  }
 }
 
 .case__box--easy .case__h3::before {
@@ -122,9 +152,10 @@
 
 .case__list {
   margin: 25px 0 0 0;
-  padding: 0 4vw 0 13vw;
+  padding: 0 5% 0 15%;
   list-style: none;
 }
+
 .case__item {
   position: relative;
   margin-top: 10px;
@@ -133,6 +164,24 @@
   font-size: .9em;
   line-height: 1.3em;
   color: @basic_gray;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    margin-top: 12px;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin-top: 13px;
+    font-size: 1.05em;
+    line-height: 1.45em;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 14px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
 }
 
 .case__item--not-active {
@@ -150,6 +199,19 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: url("../img/circle-checked.svg");
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    left: -33px;
+    width: 27px;
+    height: 27px;
+  }
+
+  @media (min-width: @laptop_width) {
+    top: 0px;
+    left: -35px;
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .case__item--not-active::before {
@@ -162,12 +224,38 @@
   justify-content: space-between;
   align-items: center;
   margin: 30px 0;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    width: 210px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 220px;
+    margin: 33px 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 240px;
+    margin: 40px 0;
+  }
 }
 
 .case__discount-price {
   .font-bold;
   font-size: 1.5em;
   color: @basic_black;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    font-size: 1.6em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.65em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.75em;
+  }
 }
 
 .case__regular-price {
@@ -176,6 +264,18 @@
   .font-bold;
   font-size: 1.1em;
   color: @basic_gray;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.25em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.35em;
+  }
 }
 
 .case__regular-price::before {
@@ -185,5 +285,19 @@
   left: -8px;
   width: 95px;
   height: 2px;
-  background-color: red
+  background-color: red;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    left: -6px;
+    width: 98px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 103px;
+  }
+
+  @media (min-width: @desktop_width) {
+    left: -5px;
+    width: 102px;
+  }
 }
