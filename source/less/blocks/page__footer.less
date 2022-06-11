@@ -1,0 +1,29 @@
+.page__footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  background-color: @basic_white;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  min-height: 70px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet_width) {
+    width: 89%;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 91%;
+  }
+
+  @media (min-width: @desktop_width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 88%;
+  }
+}

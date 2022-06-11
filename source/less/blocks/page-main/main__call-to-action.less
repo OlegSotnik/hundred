@@ -1,0 +1,325 @@
+.main__call-to-action {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: @basic_pink;
+}
+
+.call-to-action__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 88%;
+  margin: 0 auto;
+  padding: 35px 0;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  @media (min-width: @laptop_width) {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: calc(~'30% + 624px');
+    max-height: 432px;
+    padding: 45px 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: calc(~'35% + 763px');
+    max-height: 500px;
+    padding: 60px 0;
+  }
+}
+
+.call-to-action__image {
+  @media (min-width: @tablet_width) {
+    width: 203px;
+    height: 132px;
+    background-image: url("../img/call-to-action.png");
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    background-position: center;
+
+    @supports (background-image: url("../img/call-to-action.webp")) {
+      background-image: url("../img/call-to-action.webp");
+    }
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 432px;
+    height: 432px;
+    margin: 0 auto 0 5%;
+    background-image: url("../img/call-to-action-woman.png"), url("../img/call-to-action-man.png");
+    background-size: auto 90%, auto 90%;
+    background-position: 0 50%, 100% 50%;
+    animation: clap 5s ease-out infinite;
+
+    @supports (background-image: url("../img/call-to-action-woman.webp"), url("../img/call-to-action-man.webp")) {
+      background-image: url("../img/call-to-action-woman.webp"), url("../img/call-to-action-man.webp");
+    }
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@keyframes clap {
+  0% {
+    background-position: 0 70%, 100% 70%;
+  }
+
+  10% {
+    background-position: 22% 0, 78% 0;
+  }
+
+  20% {
+    background-position: 16% 70%, 84% 70%;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  90% {
+    background-position: 0 70%, 100% 70%;
+    opacity: 0;
+  }
+
+  95% {
+    background-position: 0 70%, 100% 70%;
+  }
+
+  100% {
+    background-position: 0 70%, 100% 70%;
+  }
+}
+
+.call-to-action__container::after {
+  @media (min-width: @laptop_width) {
+    position: absolute;
+    content: '';
+    left: 5%;
+    width: 432px;
+    height: 432px;
+    background-image: url("../img/target.svg");
+    background-repeat: no-repeat;
+    background-size: auto 0;
+    background-position: 50% 50%;
+    opacity: 0;
+    animation: target 5s ease-out infinite;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@keyframes target {
+  0% {
+    background-size: auto 0;
+    opacity: 0;
+  }
+
+  10% {
+    background-size: auto 0;
+    background-position: 50% 0;
+    opacity: 0;
+  }
+
+  93% {
+    background-size: auto 100%;
+    opacity: 1;
+  }
+
+  94% {
+    background-size: auto 0;
+    opacity: 0;
+  }
+
+  100% {
+    background-size: auto 0;
+    opacity: 0;
+  }
+}
+
+.call-to-action__text {
+  text-align: center;
+  width: 95%;
+  margin: 0;
+
+  .font-bold;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  color: @basic_black;
+
+  @media (min-width: @modile_xl_width) {
+    width: 380px;
+    font-size: 1.35em;
+  }
+
+  @media (min-width: @tablet_width) {
+    font-size: 1.4em;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 430px;
+    margin: 0 auto;
+    font-size: 1.45em;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 500px;
+    font-size: 1.5em;
+  }
+}
+
+.call-to-action__text--special {
+  font-size: 1.3em;
+  line-height: 1.6em;
+  text-transform: uppercase;
+
+  @media (min-width: @modile_xl_width) {
+    font-size: 1.4em;
+  }
+
+  @media (min-width: @tablet_width) {
+    font-size: 1.5em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.55em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.6em;
+  }
+}
+
+.call-to-action__button-box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin: 35px 0 0 0;
+
+  @media (min-width: @modile_xl_width) {
+    width: 75%;
+    height: 85px;
+  }
+
+  @media (min-width: @tablet_width) {
+    width: 60%;
+    height: 90px;
+  }
+
+  @media (min-width: @laptop_width) {
+    width: 350px;
+    margin: 40px auto 0 auto;
+    height: 95px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 400px;
+    margin: 60px auto 0 auto;
+    height: 105px;
+  }
+}
+
+.call-to-action__button {
+  width: 100%;
+  height: 100%;
+  padding: 10px 8%;
+  cursor: pointer;
+  background: linear-gradient(to top, rgb(231, 18, 153) 1%, rgb(254, 84, 191) 50%, rgb(231, 18, 153) 99%);
+  border: 6px solid rgb(252, 169, 221);
+  border-radius: 40px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: all .2s;
+}
+
+.call-to-action__button:hover {
+  background: rgb(231, 18, 153);
+  transform: scale(1.05);
+}
+
+.call-to-action__button:active {
+  transform: scale(.95);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.call-to-action__button-border {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  fill: none;
+  stroke: @basic_white;
+  stroke-width: 4px;
+  stroke-dasharray: 150 500;
+  stroke-dashoffset: 150;
+  animation: border 3s linear infinite;
+}
+
+@keyframes border {
+  0% {
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+
+  84% {
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+
+  85% {
+    stroke-dashoffset: 150;
+    stroke: @basic_white;
+  }
+
+  100% {
+    stroke-dashoffset: -240%;
+    stroke: @basic_white;
+
+    @media (min-width: @modile_xl_width) {
+      stroke-dashoffset: -210%;
+    }
+
+    @media (min-width: @tablet_width) {
+      stroke-dashoffset: -190%;
+    }
+  }
+}
+
+.call-to-action__button-text {
+  .font-bold;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: @basic_white;
+
+  @media (min-width: @modile_xl_width) {
+    font-size: 1.4em;
+  }
+
+  @media (min-width: @tablet_width) {
+    font-size: 1.5em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.55em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.6em;
+  }
+}
+
+.call-to-action__button-text--special {
+  text-transform: uppercase;
+}
