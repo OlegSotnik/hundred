@@ -1,0 +1,146 @@
+.page__modal-call-to-action {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal-call-to-action__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  background-color: #fff;
+}
+.modal-call-to-action__form {
+}
+.modal-call-to-action__field-set {
+}
+.modal-call-to-action__heading {
+}
+.modal-call-to-action__list-radio {
+}
+.modal-call-to-action__item-radio {
+}
+.modal-call-to-action__text-radio {
+}
+.modal-call-to-action__slider-list {
+}
+.modal-call-to-action__slider-item {
+}
+.modal-call-to-action__slider-item--input-1 {
+}
+.modal-call-to-action__slider-item--input-2 {
+}
+.modal-call-to-action__slider-item--input-3 {
+}
+.modal-call-to-action__slider-item--input-4 {
+}
+.modal-call-to-action__slider-item--input-5 {
+}
+.modal-call-to-action__button {
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+  overflow: auto;
+}
+
+.business-rates {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(~'100% - 50px');
+  height: calc(~'100% - 50px');
+  border-radius: 20px;
+  background-color: @basic_white;
+  box-shadow: 0px 2px 8px #000;
+
+  @media (min-width: @tablet_width) {
+    width: calc(~'100% - 80px');
+    height: calc(~'100% - 80px');
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 750px;
+    height: 650px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+}
+
+.business-rates--closed {
+  display: none;
+}
+
+.business-rates__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.business-rates__heading {
+  margin-top: 34px;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 54px;
+  }
+}
+
+.business-rates__list {
+  margin-top: 28px;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 47px;
+  }
+}
+
+.business-rates__item {
+  margin: 0 25px;
+
+  @media (min-width: @tablet_width) {
+    margin: 0 90px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop_width) {
+    height: 56px;
+  }
+}
+
+.business-rates__link-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 59px;
+  margin-top: 45px;
+  background: @basic_gray;
+  font-family:  "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: red;
+  text-decoration: none;
+
+  @media (min-width: @tablet_width) {
+    min-height: 108px;
+    font-size: 24px;
+    margin-top: 52px;
+  }
+}

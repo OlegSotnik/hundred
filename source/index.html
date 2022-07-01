@@ -48,6 +48,36 @@
   <meta name="application-name" content="My Application">
   <meta name="msapplication-config" content="./browserconfig.xml">
 
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(89174111, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/89174111" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6XSEN8SBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-T6XSEN8SBB');
+  </script>
+
 </head>
 
 <body class="page__body">
@@ -509,6 +539,49 @@
       <p class="footer__date">2021-2022</p>
     </div>
   </footer>
+
+  <section class="page__modal-call-to-action">
+    <div class="modal-call-to-action__container">
+      <form class="modal-call-to-action__form">
+        <fieldset class="modal-call-to-action__field-set">
+          <legend class="modal-call-to-action__heading">Как удобнее с вами связаться?</legend>
+          <div class="modal-call-to-action__list-radio">
+            <input class="modal-call-to-action__item-radio" type="radio" id="telegram" name="contact" value="telegram" checked>
+            <label class="modal-call-to-action__text-radio" for="telegram">Telegram</label>
+            <input class="modal-call-to-action__item-radio" type="radio" id="whatsapp" name="contact" value="whatsapp">
+            <label class="modal-call-to-action__text-radio" for="whatsapp">WhatsApp</label>
+            <input class="modal-call-to-action__item-radio" type="radio" id="viber" name="contact" value="viber">
+            <label class="modal-call-to-action__text-radio" for="viber">Viber</label>
+            <input class="modal-call-to-action__item-radio" type="radio" id="phone" name="contact" value="phone">
+            <label class="modal-call-to-action__text-radio" for="phone">Звонок по телефону</label>
+            <input class="modal-call-to-action__item-radio" type="radio" id="email" name="contact" value="email">
+            <label class="modal-call-to-action__text-radio" for="email">Email</label>
+          </div>
+
+          <ul class="modal-call-to-action__slider-list">
+            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-1">
+              <input type="text" name="telegram" placeholder="@ivanov">
+            </li>
+            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-2">
+              <input type="tel" name="whatsapp" placeholder="8 (999) 123-45-67">
+            </li>
+            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-3">
+              <input type="tel" name="viber" placeholder="8 (999) 123-45-67">
+            </li>
+            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-4">
+              <input type="tel" name="phone" placeholder="8 (999) 123-45-67">
+            </li>
+            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-5">
+              <input type="email" name="email" placeholder="ivanov@mail.com">
+            </li>
+          </ul>
+          <div>
+            <button class="modal-call-to-action__button" type="submit">Отправить</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
 
   <script src="../js/script.min.js"></script>
 
