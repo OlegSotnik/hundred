@@ -238,21 +238,21 @@
   height: 100%;
   padding: 10px 8%;
   cursor: pointer;
-  background: linear-gradient(to top, rgb(231, 18, 153) 1%, rgb(254, 84, 191) 50%, rgb(231, 18, 153) 99%);
-  border: 6px solid rgb(252, 169, 221);
+  background: linear-gradient(to top, @basic_button_call_to_action 1%, @special_button_call_to_action 50%, @basic_button_call_to_action 99%);
+  border: 6px solid @border_button_call_to_action;
   border-radius: 40px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px 0px @translucent_black;
   transition: all .2s;
 }
 
 .call-to-action__button:hover {
-  background: rgb(231, 18, 153);
+  background: @basic_button_call_to_action;
   transform: scale(1.05);
 }
 
 .call-to-action__button:active {
   transform: scale(.95);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 5px 0px @translucent_black;
 }
 
 .call-to-action__button-border {
