@@ -14,37 +14,192 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
+  width: 90vw;
+  padding: 35px 0;
   background-color: @basic_white;
+  border: 1px solid @special_blue;
+  border-radius: 10px;
+
+  @media (min-width: @tablet_width) {
+    padding: 40px 0;
+    border: 1.5px solid @special_blue;
+    border-radius: 15px;
+  }
+
+  @media (min-width: @laptop_width) {
+    padding: 45px 0;
+    border: 2px solid @special_blue;
+    border-radius: 17px;
+  }
+
+  @media (min-width: @desktop_width) {
+    padding: 60px 0;
+  }
 }
+
+.modal-call-to-action__toggle-box {
+  width: 24px;
+  height: 24px;
+  margin: -15px 20px 0 auto;
+  cursor: pointer;
+
+  @media (min-width: @tablet_width) {
+    width: 36px;
+    height: 36px;
+    margin: 0 25px 0 auto;
+  }
+}
+
+.modal-call-to-action__toggle {
+  display: block;
+  position: relative;
+  top: 11px;
+  width: 26px;
+  height: 2px;
+  background-color: @basic_blue;
+  border: none;
+  transform: rotate(45deg);
+
+  @media (min-width: @tablet_width) {
+    top: 17px;
+    width: 36px;
+    height: 3px;
+  }
+}
+
+.modal-call-to-action__toggle::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 2px;
+  background-color: @basic_blue;
+  transform: rotate(-90deg);
+
+  @media (min-width: @tablet_width) {
+    width: 36px;
+    height: 3px;
+  }
+}
+
 .modal-call-to-action__form {
+  margin: 0 20px;
+
+  @media (min-width: @tablet_width) {
+    margin: 0 25px;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 0 45px;
+  }
 }
+
 .modal-call-to-action__field-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
+
 .modal-call-to-action__heading {
+  width: 89%;
+  text-align: left;
+  color: @basic_blue;
 }
+
 .modal-call-to-action__list-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 0 15px;
 }
-.modal-call-to-action__item-radio {
+
+// .modal-call-to-action__item-radio {}
+
+.item-radio__check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
-.modal-call-to-action__text-radio {
+
+.item-radio__check + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
 }
-.modal-call-to-action__slider-list {
+.item-radio__check + label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid @special_blue;
+  border-radius: 0.25em;
+  margin-right: 0.6em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
 }
-.modal-call-to-action__slider-item {
+
+.item-radio__check:checked + label::before {
+  border-color: @basic_blue;
+  background-color: @basic_blue;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
-.modal-call-to-action__slider-item--input-1 {
+
+.item-radio__check:not(:disabled):not(:checked) + label:hover::before {
+  background-color: @special_blue;
 }
-.modal-call-to-action__slider-item--input-2 {
+
+.item-radio__text {
+  .font-normal;
+  font-size: .9em;
+  line-height: 1.3em;
+  color: @basic_gray;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    margin-top: 12px;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin-top: 13px;
+    font-size: 1.05em;
+    line-height: 1.45em;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 14px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
 }
-.modal-call-to-action__slider-item--input-3 {
-}
-.modal-call-to-action__slider-item--input-4 {
-}
-.modal-call-to-action__slider-item--input-5 {
-}
-.modal-call-to-action__button {
-}
+
+.modal-call-to-action__slider-list {}
+
+.modal-call-to-action__slider-item {}
+
+.modal-call-to-action__slider-item--input-1 {}
+
+.modal-call-to-action__slider-item--input-2 {}
+
+.modal-call-to-action__slider-item--input-3 {}
+
+.modal-call-to-action__slider-item--input-4 {}
+
+.modal-call-to-action__slider-item--input-5 {}
+
+.modal-call-to-action__button {}
 
 
 
@@ -129,7 +284,7 @@
   min-height: 59px;
   margin-top: 45px;
   background: @basic_gray;
-  font-family:  "Blogger Sans", "Arial", sans-serif;
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

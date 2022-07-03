@@ -542,20 +542,37 @@
 
   <section class="page__modal-call-to-action">
     <div class="modal-call-to-action__container">
+      <div class="modal-call-to-action__toggle-box">
+        <button class="modal-call-to-action__toggle" type="button">
+          <span class="visually-hidden">Открыть или закрыть модальное окно</span>
+        </button>
+      </div>
       <form class="modal-call-to-action__form">
         <fieldset class="modal-call-to-action__field-set">
-          <legend class="modal-call-to-action__heading">Как удобнее с вами связаться?</legend>
+          <legend class="modal-call-to-action__heading  main__h2">Как удобнее с вами связаться?</legend>
           <div class="modal-call-to-action__list-radio">
-            <input class="modal-call-to-action__item-radio" type="radio" id="telegram" name="contact" value="telegram" checked>
-            <label class="modal-call-to-action__text-radio" for="telegram">Telegram</label>
-            <input class="modal-call-to-action__item-radio" type="radio" id="whatsapp" name="contact" value="whatsapp">
-            <label class="modal-call-to-action__text-radio" for="whatsapp">WhatsApp</label>
-            <input class="modal-call-to-action__item-radio" type="radio" id="viber" name="contact" value="viber">
-            <label class="modal-call-to-action__text-radio" for="viber">Viber</label>
-            <input class="modal-call-to-action__item-radio" type="radio" id="phone" name="contact" value="phone">
-            <label class="modal-call-to-action__text-radio" for="phone">Звонок по телефону</label>
-            <input class="modal-call-to-action__item-radio" type="radio" id="email" name="contact" value="email">
-            <label class="modal-call-to-action__text-radio" for="email">Email</label>
+            <div class="modal-call-to-action__item-radio">
+              <input class="item-radio__check" type="radio" id="telegram" name="contact" value="telegram"
+                checked>
+              <label class="item-radio__text" for="telegram">Telegram</label>
+            </div>
+            <div class="modal-call-to-action__item-radio">
+              <input class="item-radio__check" type="radio" id="whatsapp" name="contact"
+                value="whatsapp">
+              <label class="item-radio__text" for="whatsapp">WhatsApp</label>
+            </div>
+            <div class="modal-call-to-action__item-radio">
+              <input class="item-radio__check" type="radio" id="viber" name="contact" value="viber">
+              <label class="item-radio__text" for="viber">Viber</label>
+            </div>
+            <div class="modal-call-to-action__item-radio">
+              <input class="item-radio__check" type="radio" id="phone" name="contact" value="phone">
+              <label class="item-radio__text" for="phone">Звонок по телефону</label>
+            </div>
+            <div class="modal-call-to-action__item-radio">
+              <input class="item-radio__check" type="radio" id="email" name="contact" value="email">
+              <label class="item-radio__text" for="email">Email</label>
+            </div>
           </div>
 
           <ul class="modal-call-to-action__slider-list">
