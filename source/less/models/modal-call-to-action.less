@@ -59,6 +59,7 @@
   background-color: @basic_blue;
   border: none;
   transform: rotate(45deg);
+  cursor: pointer;
 
   @media (min-width: @tablet_width) {
     top: 17px;
@@ -84,7 +85,7 @@
 }
 
 .modal-call-to-action__form {
-  margin: 0 20px;
+  margin: 0 7%;
 
   @media (min-width: @tablet_width) {
     margin: 0 25px;
@@ -119,10 +120,12 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 15px;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-// .modal-call-to-action__item-radio {}
+.modal-call-to-action__item-radio {
+  margin: 5px 0 5px;
+}
 
 .item-radio__check {
   position: absolute;
@@ -185,117 +188,81 @@
   }
 }
 
-.modal-call-to-action__slider-list {}
+.item-radio__check:checked ~ .item-radio__text {
+  margin-top: 7px;
+  font-size: 1.1em;
 
-.modal-call-to-action__slider-item {}
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    font-size: 1,2em;
+  }
 
-.modal-call-to-action__slider-item--input-1 {}
-
-.modal-call-to-action__slider-item--input-2 {}
-
-.modal-call-to-action__slider-item--input-3 {}
-
-.modal-call-to-action__slider-item--input-4 {}
-
-.modal-call-to-action__slider-item--input-5 {}
-
-.modal-call-to-action__button {}
-
-
-
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  z-index: 10;
-  overflow: auto;
-}
-
-.business-rates {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: calc(~'100% - 50px');
-  height: calc(~'100% - 50px');
-  border-radius: 20px;
-  background-color: @basic_white;
-  box-shadow: 0px 2px 8px #000;
-
-  @media (min-width: @tablet_width) {
-    width: calc(~'100% - 80px');
-    height: calc(~'100% - 80px');
+  @media (min-width: @laptop_width) {
+    font-size: 1.25em;
   }
 
   @media (min-width: @desktop_width) {
-    width: 750px;
-    height: 650px;
-    border-radius: 30px;
-    overflow: hidden;
+    font-size: 1.3em;
   }
 }
 
-.business-rates--closed {
+.item-radio__input-field {
   display: none;
-}
-
-.business-rates__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.business-rates__heading {
-  margin-top: 34px;
-
-  @media (min-width: @tablet_width) {
-    margin-top: 54px;
-  }
-}
-
-.business-rates__list {
-  margin-top: 28px;
-
-  @media (min-width: @tablet_width) {
-    margin-top: 47px;
-  }
-}
-
-.business-rates__item {
-  margin: 0 25px;
-
-  @media (min-width: @tablet_width) {
-    margin: 0 90px;
-    font-size: 20px;
-  }
-
-  @media (min-width: @desktop_width) {
-    height: 56px;
-  }
-}
-
-.business-rates__link-close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
   width: 100%;
-  min-height: 59px;
-  margin-top: 45px;
-  background: @basic_gray;
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: red;
-  text-decoration: none;
+  height: calc(2.2rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: @basic_gray;
+  background-color: @basic_white;
+  background-clip: padding-box;
+  border: 1px solid @basic_gray;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
-  @media (min-width: @tablet_width) {
-    min-height: 108px;
-    font-size: 24px;
-    margin-top: 52px;
-  }
+.item-radio__check:checked ~ .item-radio__input-field {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.item-radio__input-field:focus {
+  border: 2px solid @basic_blue;
+  outline: 0;
+  color: @basic_black;
+}
+
+.modal-call-to-action__button {
+  align-self: center;
+  width: 95%;
+  margin-top: 17px;
+  padding: 16px 32px;
+  background-color: @basic_blue;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px 0px @translucent_black;
+  cursor: pointer;
+  transition: all .2s;
+
+  .font-bold;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  color: @basic_white;
+}
+
+.modal-call-to-action__button:hover {
+  opacity: .8;
+  transform: scale(1.05);
+}
+
+.modal-call-to-action__button:active {
+  opacity: .5;
+  transform: scale(.95);
+  box-shadow: 0px 2px 5px 0px @translucent_black;
 }

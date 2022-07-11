@@ -552,49 +552,32 @@
           <legend class="modal-call-to-action__heading  main__h2">Как удобнее с вами связаться?</legend>
           <div class="modal-call-to-action__list-radio">
             <div class="modal-call-to-action__item-radio">
-              <input class="item-radio__check" type="radio" id="telegram" name="contact" value="telegram"
-                checked>
+              <input class="item-radio__check" type="radio" id="telegram" name="contact" value="telegram" checked>
               <label class="item-radio__text" for="telegram">Telegram</label>
+              <input class="item-radio__input-field" type="text" name="telegram" placeholder="@ivanov">
             </div>
             <div class="modal-call-to-action__item-radio">
-              <input class="item-radio__check" type="radio" id="whatsapp" name="contact"
-                value="whatsapp">
+              <input class="item-radio__check" type="radio" id="whatsapp" name="contact" value="whatsapp">
               <label class="item-radio__text" for="whatsapp">WhatsApp</label>
+              <input class="item-radio__input-field" type="tel" name="whatsapp" placeholder="8 (999) 123-45-67">
             </div>
             <div class="modal-call-to-action__item-radio">
               <input class="item-radio__check" type="radio" id="viber" name="contact" value="viber">
               <label class="item-radio__text" for="viber">Viber</label>
+              <input class="item-radio__input-field" type="tel" name="viber" placeholder="8 (999) 123-45-67">
             </div>
             <div class="modal-call-to-action__item-radio">
               <input class="item-radio__check" type="radio" id="phone" name="contact" value="phone">
-              <label class="item-radio__text" for="phone">Звонок по телефону</label>
+              <label class="item-radio__text" for="phone">По телефону</label>
+              <input class="item-radio__input-field" type="tel" name="phone" placeholder="8 (999) 123-45-67">
             </div>
             <div class="modal-call-to-action__item-radio">
               <input class="item-radio__check" type="radio" id="email" name="contact" value="email">
               <label class="item-radio__text" for="email">Email</label>
+              <input class="item-radio__input-field" type="email" name="email" placeholder="ivanov@mail.com">
             </div>
           </div>
-
-          <ul class="modal-call-to-action__slider-list">
-            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-1">
-              <input type="text" name="telegram" placeholder="@ivanov">
-            </li>
-            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-2">
-              <input type="tel" name="whatsapp" placeholder="8 (999) 123-45-67">
-            </li>
-            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-3">
-              <input type="tel" name="viber" placeholder="8 (999) 123-45-67">
-            </li>
-            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-4">
-              <input type="tel" name="phone" placeholder="8 (999) 123-45-67">
-            </li>
-            <li class="modal-call-to-action__slider-item modal-call-to-action__slider-item--input-5">
-              <input type="email" name="email" placeholder="ivanov@mail.com">
-            </li>
-          </ul>
-          <div>
-            <button class="modal-call-to-action__button" type="submit">Отправить</button>
-          </div>
+          <button class="modal-call-to-action__button" type="submit">Отправить</button>
         </fieldset>
       </form>
     </div>
