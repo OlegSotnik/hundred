@@ -20,6 +20,12 @@
   border: 1px solid @special_blue;
   border-radius: 10px;
 
+  @media (min-width: @modile_xl_width) {
+    width: 85vw;
+    padding: 30px 0 50px 0;
+    border-radius: 12px;
+  }
+
   @media (min-width: @tablet_width) {
     padding: 40px 0;
     border: 1.5px solid @special_blue;
@@ -43,6 +49,12 @@
   margin: -15px 20px 0 auto;
   cursor: pointer;
 
+  @media (min-width: @modile_xl_width) {
+    width: 30px;
+    height: 30px;
+    margin: -5px 25px 0 auto;
+  }
+
   @media (min-width: @tablet_width) {
     width: 36px;
     height: 36px;
@@ -61,6 +73,13 @@
   transform: rotate(45deg);
   cursor: pointer;
 
+  @media (min-width: @modile_xl_width) {
+    top: 14px;
+    left: -3px;
+    width: 33px;
+    height: 2.5px;
+  }
+
   @media (min-width: @tablet_width) {
     top: 17px;
     width: 36px;
@@ -78,6 +97,11 @@
   background-color: @basic_blue;
   transform: rotate(-90deg);
 
+  @media (min-width: @modile_xl_width) {
+    width: 33px;
+    height: 2.5px;
+  }
+
   @media (min-width: @tablet_width) {
     width: 36px;
     height: 3px;
@@ -86,6 +110,10 @@
 
 .modal-call-to-action__form {
   margin: 0 7%;
+
+  @media (min-width: @modile_xl_width) {
+    margin: -17px 8% 0 8%;
+  }
 
   @media (min-width: @tablet_width) {
     margin: 0 25px;
@@ -113,6 +141,10 @@
   width: 89%;
   text-align: left;
   color: @basic_blue;
+
+  @media (min-width: @modile_xl_width) {
+    width: 85%;
+  }
 }
 
 .modal-call-to-action__list-radio {
@@ -121,10 +153,15 @@
   justify-content: center;
   margin-top: 15px;
   padding: 0 20px;
+
+  @media (min-width: @modile_xl_width) {
+    margin-top: 17px;
+    padding: 0 25px;
+  }
 }
 
 .modal-call-to-action__item-radio {
-  margin: 5px 0 5px;
+  margin: 5px 0;
 }
 
 .item-radio__check {
@@ -151,6 +188,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+
+  @media (min-width: @modile_xl_width) {
+    width: 1.1em;
+    height: 1.1em;
+  }
 }
 
 .item-radio__check:checked + label::before {
@@ -169,20 +211,17 @@
   line-height: 1.3em;
   color: @basic_gray;
 
-  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
-    margin-top: 12px;
+  @media (min-width: @modile_xl_width) {
     font-size: 1em;
     line-height: 1.4em;
   }
 
   @media (min-width: @laptop_width) {
-    margin-top: 13px;
     font-size: 1.05em;
     line-height: 1.45em;
   }
 
   @media (min-width: @desktop_width) {
-    margin-top: 14px;
     font-size: 1.1em;
     line-height: 1.5em;
   }
@@ -192,8 +231,9 @@
   margin-top: 7px;
   font-size: 1.1em;
 
-  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
-    font-size: 1,2em;
+  @media (min-width: @modile_xl_width) {
+    margin-top: 9px;
+    font-size: 1.2em;
   }
 
   @media (min-width: @laptop_width) {
@@ -225,11 +265,19 @@
   border: 1px solid @basic_gray;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  @media (min-width: @modile_xl_width) {
+    margin-top: 3px;
+  }
 }
 
 .item-radio__check:checked ~ .item-radio__input-field {
   display: inline-block;
   margin-bottom: 9px;
+
+  @media (min-width: @modile_xl_width) {
+    margin-bottom: 13px;
+  }
 }
 
 .item-radio__input-field:focus {
@@ -254,6 +302,13 @@
   font-size: 1.2em;
   line-height: 1.3em;
   color: @basic_white;
+
+  @media (min-width: @modile_xl_width) {
+    width: 90%;
+    margin-top: 22px;
+    border-radius: 31px;
+    font-size: 1.3em;
+  }
 }
 
 .modal-call-to-action__button:hover {
