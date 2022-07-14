@@ -27,7 +27,8 @@
   }
 
   @media (min-width: @tablet_width) {
-    padding: 40px 0;
+    width: 75vw;
+    padding: 30px 0 60px 0;
     border: 1.5px solid @special_blue;
     border-radius: 15px;
   }
@@ -58,7 +59,7 @@
   @media (min-width: @tablet_width) {
     width: 36px;
     height: 36px;
-    margin: 0 25px 0 auto;
+    margin: 0 30px 0 auto;
   }
 }
 
@@ -82,7 +83,7 @@
 
   @media (min-width: @tablet_width) {
     top: 17px;
-    width: 36px;
+    width: 38px;
     height: 3px;
   }
 }
@@ -103,7 +104,7 @@
   }
 
   @media (min-width: @tablet_width) {
-    width: 36px;
+    width: 38px;
     height: 3px;
   }
 }
@@ -112,11 +113,11 @@
   margin: 0 7%;
 
   @media (min-width: @modile_xl_width) {
-    margin: -17px 8% 0 8%;
+    margin: -17px 8% 0 9%;
   }
 
   @media (min-width: @tablet_width) {
-    margin: 0 25px;
+    margin: -22px 8% 0 10%;
   }
 
   @media (min-width: @laptop_width) {
@@ -158,6 +159,11 @@
     margin-top: 17px;
     padding: 0 25px;
   }
+
+  @media (min-width: @tablet_width) {
+    margin-top: 19px;
+    padding: 0 35px;
+  }
 }
 
 .modal-call-to-action__item-radio {
@@ -175,6 +181,7 @@
   align-items: center;
   user-select: none;
 }
+
 .item-radio__check + label::before {
   content: '';
   display: inline-block;
@@ -192,6 +199,18 @@
   @media (min-width: @modile_xl_width) {
     width: 1.1em;
     height: 1.1em;
+    margin-right: 0.8em;
+  }
+
+  @media (min-width: @tablet_width) {
+    width: 1.15em;
+    height: 1.15em;
+    margin-right: 1em;
+  }
+
+  @media (min-width: @tablet_width) {
+    width: 1.2em;
+    height: 1.2em;
   }
 }
 
@@ -206,6 +225,8 @@
 }
 
 .item-radio__text {
+  width: 100%;
+  
   .font-normal;
   font-size: .9em;
   line-height: 1.3em;
@@ -216,14 +237,18 @@
     line-height: 1.4em;
   }
 
-  @media (min-width: @laptop_width) {
+  @media (min-width: @tablet_width) {
     font-size: 1.05em;
     line-height: 1.45em;
   }
 
-  @media (min-width: @desktop_width) {
+  @media (min-width: @laptop_width) {
     font-size: 1.1em;
     line-height: 1.5em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.15em;
   }
 }
 
@@ -236,12 +261,16 @@
     font-size: 1.2em;
   }
 
+  @media (min-width: @tablet_width) {
+    font-size: 1.3em;
+  }
+
   @media (min-width: @laptop_width) {
-    font-size: 1.25em;
+    font-size: 1.4em;
   }
 
   @media (min-width: @desktop_width) {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 }
 
@@ -269,6 +298,12 @@
   @media (min-width: @modile_xl_width) {
     margin-top: 3px;
   }
+
+  @media (min-width: @tablet_width) {
+    width: 60%;
+    text-align: center;
+    margin: 6px 0 3px 0;
+  }
 }
 
 .item-radio__check:checked ~ .item-radio__input-field {
@@ -277,6 +312,10 @@
 
   @media (min-width: @modile_xl_width) {
     margin-bottom: 13px;
+  }
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 16px;
   }
 }
 
@@ -308,6 +347,13 @@
     margin-top: 22px;
     border-radius: 31px;
     font-size: 1.3em;
+  }
+
+  @media (min-width: @tablet_width) {
+    margin-top: 25px;
+    border-radius: 33px;
+    font-size: 1.4em;
+    line-height: 1.4em;
   }
 }
 
