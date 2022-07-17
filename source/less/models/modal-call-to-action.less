@@ -34,13 +34,15 @@
   }
 
   @media (min-width: @laptop_width) {
-    padding: 45px 0;
+    width: 60vw;
+    padding: 30px 0 70px 0;
     border: 2px solid @special_blue;
     border-radius: 17px;
   }
 
   @media (min-width: @desktop_width) {
-    padding: 60px 0;
+    width: 50vw;
+    padding: 30px 0 75px 0;
   }
 }
 
@@ -86,6 +88,10 @@
     width: 38px;
     height: 3px;
   }
+
+  @media (min-width: @laptop_width) {
+    width: 41px;
+  }
 }
 
 .modal-call-to-action__toggle::after {
@@ -107,6 +113,10 @@
     width: 38px;
     height: 3px;
   }
+
+  @media (min-width: @laptop_width) {
+    width: 41px;
+  }
 }
 
 .modal-call-to-action__form {
@@ -121,11 +131,11 @@
   }
 
   @media (min-width: @laptop_width) {
-    margin: 0 30px;
+    margin: -17px 11% 0 11%;
   }
 
   @media (min-width: @desktop_width) {
-    margin: 0 45px;
+    margin: -19px 11% 0 11%;
   }
 }
 
@@ -163,6 +173,16 @@
   @media (min-width: @tablet_width) {
     margin-top: 19px;
     padding: 0 35px;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin-top: 22px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 25px;
+    padding: 0 45px;
   }
 }
 
@@ -203,14 +223,21 @@
   }
 
   @media (min-width: @tablet_width) {
-    width: 1.15em;
-    height: 1.15em;
+    width: 1.2em;
+    height: 1.2em;
     margin-right: 1em;
   }
 
-  @media (min-width: @tablet_width) {
-    width: 1.2em;
-    height: 1.2em;
+  @media (min-width: @laptop_width) {
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 1.1em;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 1.2em;
   }
 }
 
@@ -226,7 +253,7 @@
 
 .item-radio__text {
   width: 100%;
-  
+
   .font-normal;
   font-size: .9em;
   line-height: 1.3em;
@@ -354,6 +381,20 @@
     border-radius: 33px;
     font-size: 1.4em;
     line-height: 1.4em;
+  }
+
+  @media (min-width: @laptop_width) {
+    margin-top: 32px;
+    border-radius: 35px;
+    font-size: 1.45em;
+    line-height: 1.45em;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 35px;
+    border-radius: 36px;
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
 }
 
