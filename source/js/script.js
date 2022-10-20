@@ -54,7 +54,22 @@ document.addEventListener('DOMContentLoaded', function () {
     if (error <= 4) {
 
     } else {
-      alert('заполните минимум одно поле с контактными данными!');
+      // Открытие/закрытие попапа ошибки
+      const modalError = document.querySelector(".page__modal-error");
+      const buttonError = document.querySelector(".modal-error__button");
+      const toggleError = document.querySelector(".modal-error__toggle-box, .modal-error__toggle");
+
+      modalError.classList.remove("visually-hidden");
+
+      toggleError.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalError.classList.add("visually-hidden");
+      });
+
+      buttonError.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalError.classList.add("visually-hidden");
+      });
     }
   }
 
