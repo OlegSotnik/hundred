@@ -51,8 +51,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let error = formValidate(form);
 
-    if (error <= 4) {
+    let formData = new FormData(form);
 
+    if (error <= 4) {
+      const modalCTAContainer = document.querySelector('.modal-call-to-action__container');
+
+      modalCTAContainer.classList.add('modal-call-to-action__container--sending');
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        formPreview.innerHTML = '';
+        form.reset();
+        modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
+      } else {
+        alert("Ошибка!")
+        modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
+      }
     } else {
       // Открытие/закрытие попапа ошибки
       const modalError = document.querySelector(".page__modal-error");

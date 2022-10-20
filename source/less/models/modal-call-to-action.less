@@ -46,6 +46,24 @@
   }
 }
 
+.modal-call-to-action__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: @translucent_pink url("../img/loading.gif") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.modal-call-to-action__container.modal-call-to-action__container--sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-call-to-action__toggle-box {
   width: 24px;
   height: 24px;
