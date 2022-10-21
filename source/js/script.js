@@ -40,7 +40,7 @@ toggleCTA.addEventListener("click", function (evt) {
 
 // Проверяем валидация формы
 
-"use strict"
+// "use strict"
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.modal-call-to-action__form');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
         modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
       } else {
-        alert("Ошибка!")
+        alert("Ошибка отправки!js")
         modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
       }
     } else {
@@ -143,5 +143,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
-
-// Отправка сообщения на почту
