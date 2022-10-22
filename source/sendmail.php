@@ -1,52 +1,54 @@
 <?php
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
 
-  require 'phpmailer/src/Exception.php';
-  require 'phpmailer/src/PHPMailer.php';
+require_once('PHPMailer.php');
+require_once('SMTP.php');
+require_once('Exception.php');
 
-  $mail = new PHPMailer(true);
-  $mail->CharSet = 'UTF-8';
-  $mail->setLanguage('ru', 'phpmailer/language/');
-  $mail->IsHTML(true);
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 
-  //От кого письмо
-  $mail->setFrom('zakaz@100hundred.ru', 'Landing Page');
-  //кому отправить
-  $mail->addAddress('oleg-00@yandex.ru, zakaz@100hundred.ru');
-  //Тема письма
-  $mail->Subject = 'Заявка с LP';
+$mail->isSMTP();
+// IP или хостнейм сервера, на котором находится Ваш почтовый аккаунт. Этот адрес Вы можете найти в письме с данными от хостинг-аккаунта.
 
-  //тело письма
-  $body = '<h1>Письмо с заказом!</h1>';
+// так как мы используем 465 порт, то перед SERVER_ADDRESS надо указать ssl://
+// если будем использовать 587 порт, то перед SERVER_ADDRESS надо указать tls://
+// если используется 25 порт, то указывается только SERVER_ADDRESS
 
-  if(trim(!empty($_POST['telegram']))){
-    $body.='<p><strong>Телеграм:</strong> '.$_POST['telegram'].'</p>';
-  }
-  if(trim(!empty($_POST['whatsapp']))){
-    $body.='<p><strong>WhatsApp:</strong> '.$_POST['whatsapp'].'</p>';
-  }
-  if(trim(!empty($_POST['viber']))){
-    $body.='<p><strong>Viber:</strong> '.$_POST['viber'].'</p>';
-  }
-  if(trim(!empty($_POST['phone']))){
-    $body.='<p><strong>Телефон:</strong> '.$_POST['phone'].'</p>';
-  }
-  if(trim(!empty($_POST['email']))){
-    $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
-  }
+$mail->Host = 'ssl://mail.100hundred.ru';
 
-  $mail->Body = $body;
+$mail->SMTPAuth = true;
+// наименование почтового ящика, или логин на почтовом сервере. Как правило, Вы указываете его, когда создаете почтовый ящик.
+$mail->Username = 'zakaz@100hundred.ru';
+// пароль от почтового ящика.
+$mail->Password = 'Oleg-2009198484';
 
-  //отправляем
-  if (!$mail->send()) {
-    $message = 'Ошибка!php';
-  } else {
-    $message = 'Данные отправлены!';
-  }
+// при указании SMTPSecure = ssl, то используется порт 465
+// при указании tls - порт 587
+// рекомендуется сочетать с указанием протокола в переменной Host
+$mail->SMTPSecure = 'ssl';
+$mail->Port = '465';
+$mail->SMTPOptions = [ 'ssl' => [ 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true, ] ];
 
-  $response = ['message' => $message];
+// далее следует код, который отвечает за отправку письма
+// укажите почтовый ящик отправителя. Рекомендуем указывать такой же, который указываем в авторизационных данных - LOGIN@DOMAIN.RU
+$mail->From = 'zakaz@100hundred.ru';
+// укажите имя отправителя, например "Сайт DOMAIN.RU"
+$mail->FromName = 'https://lp.100hundred.ru';
+// укажите тему сообщения здесь
+$mail->Subject = 'hi';
+// текст сообщения
+$mail->Body = 'ok';
+// кодировка, можете изменить на необходимую, но чаще всего используется UTF-8
+$mail->CharSet = 'UTF-8';
+//  укажите true вместо false, если хотите, чтобы сообщение обрабатывалось как HTML
+$mail->isHTML(true);
+// укажите почтовый адрес получателя
+$mail->AddAddress('Oleg-00@yandex.ru');
+// укажите 4, если почта не отправляется, чтобы узнать, почему
+$mail->SMTPDebug = 0;
+// отправляем письмо
+if($mail->send()){
+echo 'OK';
+}else{
+echo 'BAD';
+}
 
-  header('Content-type: application/json');
-  echo json_encode($response);
-?>
