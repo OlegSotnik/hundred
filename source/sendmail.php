@@ -1,8 +1,8 @@
 <?php
 
-require_once('PHPMailer.php');
-require_once('SMTP.php');
-require_once('Exception.php');
+require_once('phpmailer/src/PHPMailer.php');
+require_once('phpmailer/src/SMTP.php');
+require_once('phpmailer/src/Exception.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
@@ -19,7 +19,7 @@ $mail->SMTPAuth = true;
 // наименование почтового ящика, или логин на почтовом сервере. Как правило, Вы указываете его, когда создаете почтовый ящик.
 $mail->Username = 'zakaz@100hundred.ru';
 // пароль от почтового ящика.
-$mail->Password = 'Oleg-2009198484';
+$mail->Password = 'gM6dK7mJ9asT8h';
 
 // при указании SMTPSecure = ssl, то используется порт 465
 // при указании tls - порт 587
@@ -32,23 +32,50 @@ $mail->SMTPOptions = [ 'ssl' => [ 'verify_peer' => false, 'verify_peer_name' => 
 // укажите почтовый ящик отправителя. Рекомендуем указывать такой же, который указываем в авторизационных данных - LOGIN@DOMAIN.RU
 $mail->From = 'zakaz@100hundred.ru';
 // укажите имя отправителя, например "Сайт DOMAIN.RU"
-$mail->FromName = 'https://lp.100hundred.ru';
+$mail->FromName = 'Hundred.ru';
 // укажите тему сообщения здесь
-$mail->Subject = 'hi';
-// текст сообщения
-$mail->Body = 'ok';
+$mail->Subject = 'Заявка с Landing Page';
 // кодировка, можете изменить на необходимую, но чаще всего используется UTF-8
 $mail->CharSet = 'UTF-8';
 //  укажите true вместо false, если хотите, чтобы сообщение обрабатывалось как HTML
 $mail->isHTML(true);
+//  указываем Русский язык
+$mail->setLanguage('ru', 'phpmailer/language/');
 // укажите почтовый адрес получателя
 $mail->AddAddress('Oleg-00@yandex.ru');
 // укажите 4, если почта не отправляется, чтобы узнать, почему
 $mail->SMTPDebug = 0;
-// отправляем письмо
-if($mail->send()){
-echo 'OK';
-}else{
-echo 'BAD';
+
+//тело письма
+$body = '<h1>Контакты для обратной связи:</h1>';
+
+if(trim(!empty($_POST['telegram']))){
+  $body.='<p><strong>Телеграм:</strong> '.$_POST['telegram'].'</p>';
+}
+if(trim(!empty($_POST['whatsapp']))){
+  $body.='<p><strong>WhatsApp:</strong> '.$_POST['whatsapp'].'</p>';
+}
+if(trim(!empty($_POST['viber']))){
+  $body.='<p><strong>Viber:</strong> '.$_POST['viber'].'</p>';
+}
+if(trim(!empty($_POST['phone']))){
+  $body.='<p><strong>Телефон:</strong> '.$_POST['phone'].'</p>';
+}
+if(trim(!empty($_POST['email']))){
+  $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 }
 
+$mail->Body = $body;
+
+//отправляем
+if (!$mail->send()) {
+  $message = 'Ошибка!php';
+} else {
+  $message = 'Данные отправлены!';
+}
+
+$response = ['message' => $message];
+
+header('Content-type: application/json');
+echo json_encode($response);
+?>

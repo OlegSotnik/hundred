@@ -583,15 +583,27 @@
     </div>
   </section>
 
-  <section class="page__modal-error visually-hidden">
-    <div class="modal-error__container">
-      <div class="modal-error__toggle-box">
-        <button class="modal-error__toggle" type="button">
+  <section class="page__modal-feedback page__modal-feedback--error visually-hidden">
+    <div class="modal-feedback__container">
+      <div class="modal-feedback__toggle-box modal-feedback__toggle-box--error">
+        <button class="modal-feedback__toggle modal-feedback__toggle--error" type="button">
           <span class="visually-hidden">Открыть или закрыть модальное окно</span>
         </button>
       </div>
-      <p class="modal-error__text">Заполните минимум одно поле с контактными данными!</p>
-      <button class="modal-error__button" type="submit">Ok</button>
+      <p class="modal-feedback__text">Заполните минимум одно поле с контактными данными!</p>
+      <button class="modal-feedback__button modal-feedback__button--error" type="submit">Ok</button>
+    </div>
+  </section>
+
+  <section class="page__modal-feedback page__modal-feedback--done visually-hidden">
+    <div class="modal-feedback__container">
+      <div class="modal-feedback__toggle-box modal-feedback__toggle-box--done">
+        <button class="modal-feedback__toggle modal-feedback__toggle--done" type="button">
+          <span class="visually-hidden">Открыть или закрыть модальное окно</span>
+        </button>
+      </div>
+      <p class="modal-feedback__text"><strong>Отправлено!</strong> <br> В ближайшее время мы свяжемся с вами.</p>
+      <button class="modal-feedback__button modal-feedback__button--done" type="submit">Ok</button>
     </div>
   </section>
 

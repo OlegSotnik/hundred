@@ -44,6 +44,9 @@ toggleCTA.addEventListener("click", function (evt) {
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.modal-call-to-action__form');
+  const modalCTA = document.querySelector(".page__modal-call-to-action");
+  const modalDone = document.querySelector(".page__modal-feedback--done");
+
   form.addEventListener('submit', formSend);
 
   async function formSend(e) {
@@ -57,34 +60,43 @@ document.addEventListener('DOMContentLoaded', function () {
       const modalCTAContainer = document.querySelector('.modal-call-to-action__container');
 
       modalCTAContainer.classList.add('modal-call-to-action__container--sending');
+
       let response = await fetch('sendmail.php', {
         method: 'POST',
         body: formData
       });
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        formPreview.innerHTML = '';
-        form.reset();
-        modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
-      } else {
-        alert("Ошибка отправки!js")
-        modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
-      }
+
+      modalCTAContainer.classList.remove('modal-call-to-action__container--sending');
+      modalCTA.classList.add("visually-hidden");
+      modalDone.classList.remove("visually-hidden");
+
+      const buttonFeedbackDone = document.querySelector(".modal-feedback__button--done");
+      const toggleFeedbackDone = document.querySelector(".modal-feedback__toggle-box--done, .modal-feedback__toggle--done");
+
+      toggleFeedbackDone.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalDone.classList.add("visually-hidden");
+      });
+
+      buttonFeedbackDone.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalDone.classList.add("visually-hidden");
+      });
     } else {
-      // Открытие/закрытие попапа ошибки
-      const modalError = document.querySelector(".page__modal-error");
-      const buttonError = document.querySelector(".modal-error__button");
-      const toggleError = document.querySelector(".modal-error__toggle-box, .modal-error__toggle");
+      // Открытие/закрытие попапа feedback
+      const modalError = document.querySelector(".page__modal-feedback--error");
 
       modalError.classList.remove("visually-hidden");
 
-      toggleError.addEventListener("click", function (evt) {
+      const buttonFeedbackError = document.querySelector(".modal-feedback__button--error");
+      const toggleFeedbackError = document.querySelector(".modal-feedback__toggle-box--error, .modal-feedback__toggle--error");
+
+      toggleFeedbackError.addEventListener("click", function (evt) {
         evt.preventDefault();
         modalError.classList.add("visually-hidden");
       });
 
-      buttonError.addEventListener("click", function (evt) {
+      buttonFeedbackError.addEventListener("click", function (evt) {
         evt.preventDefault();
         modalError.classList.add("visually-hidden");
       });
