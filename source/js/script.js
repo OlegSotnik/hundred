@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Кнопка 'scroll-up'
 
-const offset = 100;
+const offset = 800;
 const scrollUp = document.querySelector('.page__scroll-up');
 const scrollUpSvgPath = document.querySelector('.scroll-up__svg-path');
 const pathLength = scrollUpSvgPath.getTotalLength();
