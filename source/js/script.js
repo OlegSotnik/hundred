@@ -155,3 +155,46 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+
+
+// Кнопка 'scroll-up'
+
+const offset = 100;
+const scrollUp = document.querySelector('.page__scroll-up');
+const scrollUpSvgPath = document.querySelector('.scroll-up__svg-path');
+const pathLength = scrollUpSvgPath.getTotalLength();
+
+scrollUpSvgPath.style.strokeDasharray = `${pathLength} ${pathLength}`;
+scrollUpSvgPath.style.transition = 'stroke-dashoffset 20ms';
+
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+
+// Кнопка 'scroll-up'  функция вычисления длины заливки тени кнопки, соответственно величине скролла
+const updateDashoffset = () => {
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const dashoffset = pathLength - (getTop() * pathLength / height);
+
+  scrollUpSvgPath.style.strokeDashoffset = dashoffset;
+};
+
+// Кнопка 'scroll-up'  функция появления и исчезновения кнопки скролла
+window.addEventListener('scroll', () => {
+  updateDashoffset();
+
+  if (getTop() > offset) {
+    scrollUp.classList.add('page__scroll-up--active');
+  } else {
+    scrollUp.classList.remove('page__scroll-up--active');
+  }
+});
+
+// Кнопка 'scroll-up'  функция скролла в начало страница при нажатии на кнопку
+scrollUp.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+updateDashoffset();
