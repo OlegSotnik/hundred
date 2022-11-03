@@ -15,7 +15,7 @@
   @media (min-width: @tablet_width) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px 0;
   }
 
@@ -53,6 +53,7 @@
   }
 
   @media (min-width: @laptop_width) {
+    width: 30%;
     border: 2px solid @special_blue;
     border-radius: 17px;
     margin: 35px 0 0 0;
@@ -67,6 +68,19 @@
   @media (max-width: @mobile_width_only) {
     margin: 25px 0 35px 0;
   }
+}
+
+.case__box--standard {
+  @media (min-width: @tablet_width) {
+    margin: 35px 0 0 35px;
+  }
+}
+
+.case__box--plus {
+  margin: 35px 0 0 0;
+
+  @media (min-width: @laptop_width) {
+    margin: 35px 0 0 35px;}
 }
 
 .case__h3-box {
@@ -151,6 +165,10 @@
   background-image: url("../img/case-icon-2.svg");
 }
 
+.case__box--plus .case__h3::before {
+  background-image: url("../img/case-icon-2.svg");
+}
+
 .case__list {
   margin: 25px 0 0 0;
   padding: 0 5% 0 15%;
@@ -174,7 +192,6 @@
 
   @media (min-width: @laptop_width) {
     margin-top: 13px;
-    font-size: 1.05em;
     line-height: 1.45em;
   }
 
@@ -279,6 +296,26 @@
   }
 }
 
+.case__standard-price {
+  margin: 0 auto;
+
+  .font-bold;
+  font-size: 1.8em;
+  color: @basic_black;
+
+  @media (min-width: @modile_xl_width) and (max-width: @mobile_width_only) {
+    font-size: 1.6em;
+  }
+
+  @media (min-width: @laptop_width) {
+    font-size: 1.65em;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 1.75em;
+  }
+}
+
 .case__regular-price::before {
   content: "";
   position: absolute;
@@ -301,4 +338,9 @@
     left: -5px;
     width: 102px;
   }
+}
+
+.price__currency {
+  .font-normal;
+  font-size: .8em;
 }
