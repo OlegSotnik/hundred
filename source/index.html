@@ -133,7 +133,15 @@
             <span class="sign__icon-arrow"></span>
           </div>
         </a>
-      </div>
+        <div class="banner__canvas">
+          <div class="canvas-wrap">
+            <div id="canvas"></div>
+            <div class="plane">
+              <img class="canvas__photo" src="img/banner-flag.png" srcset="img/banner-flag@2x.png 2x" alt="Флаг" crossorigin="anonymous">
+            </div>
+          </div>
+        </div>
+        <!-- <img class="banner__cloud-1" src="img/cloud@2x.png" width="auto" height="20px" alt="Облако"> -->
     </section>
 
     <section class="main__stages-of-work" id="stages-of-work">
@@ -530,7 +538,8 @@
       <div class="call-to-action__container">
         <div class="call-to-action__image"></div>
         <p class="call-to-action__text">Запишись на консультацию и получи <br> <span
-            class="call-to-action__text--special">скидку <span class="call-to-action__text--special-1">до</span> 33%</span></p>
+            class="call-to-action__text--special">скидку <span class="call-to-action__text--special-1">до</span>
+            33%</span></p>
         <div class="call-to-action__button-box">
           <button class="call-to-action__button">
             <svg class="call-to-action__button-border" width="99%" height="99%">
@@ -560,14 +569,11 @@
 
   <div class="page__scroll-up">
     <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
-      <path
-        class="scroll-up__svg-path"
-        d="
+      <path class="scroll-up__svg-path" d="
           M24,0
           a24,24 0 0,1 0,48
           a24,24 0 0,1 0,-48
-        "
-      />
+        " />
     </svg>
   </div>
 
@@ -639,6 +645,8 @@
   </section>
 
   <script src="/js/script.min.js"></script>
+  <script src="/js/curtains.min.js"></script>
+  <script src="/js/flag.js"></script>
 
 </body>
 

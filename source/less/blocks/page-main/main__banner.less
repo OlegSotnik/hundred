@@ -8,6 +8,7 @@
 }
 
 .banner__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,4 +313,66 @@
   100% {
     transform: rotate(-45deg) scale(.9);
   }
+}
+
+.banner__canvas {
+  position: absolute;
+  top: calc(~'9% + 95px');
+  left: calc(~'50% - 10px');
+
+  @media (min-width: @tablet_width) {
+    top: 64px;
+    left: calc(~'100% - 196px');
+  }
+
+  @media (min-width: @laptop_width) {
+    top: 105px;
+    left: calc(~'100% - 216px');
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 107px;
+    left: calc(~'100% - 250px');
+  }
+}
+
+.canvas-wrap {
+  position: relative;
+  padding: 10px;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.plane {
+  width: 38.44vw;
+  height: 12.84vw;
+
+  @media (min-width: @tablet_width) {
+    width: 177.67px;
+    height: 59.37px;
+    // width: 136.67px;
+    // height: 45.67px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 205.01px;
+    height: 68.51px;
+  }
+}
+
+.canvas__photo {
+  display: none;
+}
+
+.banner__cloud-1 {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+  height: 25px;
 }
