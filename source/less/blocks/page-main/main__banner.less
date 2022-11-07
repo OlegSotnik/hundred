@@ -117,6 +117,7 @@
   color: @basic_blue;
   margin: 30px 0 0 0;
   text-align: center;
+  z-index: 2;
 
   @media (min-width: @modile_xl_width) {
     width: 350px;
@@ -169,6 +170,7 @@
     font-size: 1.2em;
     line-height: 1.5em;
     text-align: start;
+    z-index: 2;
   }
 
   @media (min-width: @laptop_width) {
@@ -192,6 +194,7 @@
   background-color: @basic_pink;
   border-radius: 30px;
   text-decoration: none;
+  z-index: 2;
 
   @media (min-width: @modile_xl_width) {
     height: 70px;
@@ -368,80 +371,157 @@
   display: none;
 }
 
-// @media (max-width: @modile_xl_width) {
-//   .banner__cloud-1 {
-//     position: absolute;
-//     left: 10%;
-//     bottom: 30%;
-//     height: 7vw;
-//     animation: cloud1 12s infinite linear;
-//   }
+  .banner__cloud-1 {
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    height: 7vw;
+    animation: cloud1 24s infinite linear;
 
-//   .banner__cloud-2 {
-//     position: absolute;
-//     left: -100vw;
-//     bottom: 35%;
-//     height: 8vw;
-//     animation: cloud2 12s infinite linear;
-//   }
+    @media (min-width: @tablet_width) {
+      bottom: 30px;
+      height: 30px;
+      animation: cloud1 30s infinite linear;
+    }
 
-//   @keyframes cloud1 {
-//     0% {
-//       opacity: 1;
-//     }
+    @media (min-width: @laptop_width) {
+      bottom: 150px;
+      height: 33px;
+      animation: cloud1 38s infinite linear;
+    }
 
-//     46% {
-//       transform: translateX(100vw);
-//       opacity: 1;
-//     }
+    @media (min-width: @desktop_width) {
+      bottom: 250px;
+      height: 56px;
+      animation: cloud1 46s infinite linear;
+    }
+  }
 
-//     48% {
-//       transform: translateX(100vw);
-//       opacity: 0;
-//     }
+  .banner__cloud-2 {
+    position: absolute;
+    left: -100vw;
+    bottom: 37%;
+    height: 8vw;
+    animation: cloud2 24s infinite linear;
 
-//     49% {
-//       transform: translateX(-100vw);
-//       opacity: 0;
-//     }
+    @media (min-width: @tablet_width) {
+      bottom: 150px;
+      height: 50px;
+      animation: cloud2 30s infinite linear;
+    }
 
-//     54% {
-//       transform: translateX(-100vw);
-//       opacity: 1;
-//     }
+    @media (min-width: @laptop_width) {
+      bottom: 260px;
+      height: 55px;
+      animation: cloud2 38s infinite linear;
+    }
 
-//     100% {
-//       opacity: 1;
-//     }
-//   }
+    @media (min-width: @desktop_width) {
+      bottom: 290px;
+      height: 50px;
+      animation: cloud2 46s infinite linear;
+      animation-delay: -7s;
+    }
+  }
 
-//   @keyframes cloud2 {
-//     0% {
-//       opacity: 1;
-//     }
+  .banner__cloud-3 {
+    display: none;
 
-//     92% {
-//       transform: translateX(200vw);
-//       opacity: 1;
-//     }
+    @media (min-width: @tablet_width) {
+      display: block;
+      position: absolute;
+      left: -100vw;
+      bottom: 100px;
+      height: 40px;
+      animation: cloud2 30s infinite linear;
+      animation-delay: 9s;
+    }
 
-//     93% {
-//       transform: translateX(200vw);
-//       opacity: 0;
-//     }
+    @media (min-width: @laptop_width) {
+      bottom: 200px;
+      height: 45px;
+      animation: cloud2 38s infinite linear;
+      animation-delay: 12s;
+    }
 
-//     94% {
-//       transform: translateX(-100vw);
-//       opacity: 0;
-//     }
+    @media (min-width: @desktop_width) {
+      bottom: 370px;
+      height: 45px;
+      animation: cloud2 46s infinite linear;
+      animation-delay: 1s;
+    }
+  }
 
-//     95% {
-//       transform: translateX(-100vw);
-//       opacity: 1;
-//     }
+  .banner__cloud-4 {
+    display: none;
 
-//     100% {
-//       opacity: 1;
-//     }
-//   }
-// }
+    @media (min-width: @desktop_width) {
+      display: block;
+      position: absolute;
+      left: -100vw;
+      bottom: 325px;
+      height: 60px;
+      animation: cloud2 46s infinite linear;
+      animation-delay: 8s;
+    }
+  }
+
+  @keyframes cloud1 {
+    0% {
+      opacity: 1;
+    }
+
+    46% {
+      transform: translateX(100vw);
+      opacity: 1;
+    }
+
+    48% {
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+
+    49% {
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
+
+    54% {
+      transform: translateX(-100vw);
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cloud2 {
+    0% {
+      opacity: 1;
+    }
+
+    92% {
+      transform: translateX(200vw);
+      opacity: 1;
+    }
+
+    93% {
+      transform: translateX(200vw);
+      opacity: 0;
+    }
+
+    94% {
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
+
+    95% {
+      transform: translateX(-100vw);
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
