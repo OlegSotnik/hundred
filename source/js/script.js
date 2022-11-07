@@ -12,6 +12,12 @@ headerToggle.addEventListener("click", function (evt) {
   headerNavList.classList.toggle("header__nav-list--closed");
 });
 
+const theLinks = document.querySelectorAll(".nav-item__link");
+theLinks.forEach(link => link.addEventListener("click", () => {
+  headerToggle.classList.toggle("header__toggle--closed");
+  headerNavList.classList.toggle("header__nav-list--closed");
+}))
+
 document.addEventListener('click', (e) => {
   const withinBoundariesList = e.composedPath().includes(headerNavList);
   const withinBoundariesToggle = e.composedPath().includes(headerToggle);
