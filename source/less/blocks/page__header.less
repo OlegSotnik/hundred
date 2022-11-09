@@ -99,7 +99,8 @@
   }
 }
 
-.header__toggle:focus, .header__toggle:active {
+.header__toggle:focus,
+.header__toggle:active {
   outline: none;
 }
 
@@ -264,5 +265,31 @@
 .nav-item__link:active {
   color: @basic_white;
   transform: scale(.9);
-  transition: all .1s;
+  transition: all .2s;
+}
+
+@media (min-width: @laptop_width) {
+  .nav-item__link:after {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: @basic_blue;
+    bottom: 10px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  .nav-item__link:hover:after,
+  .nav-item__link:active:after,
+  .nav-item__link:focus:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-item__link:active:after,
+  .nav-item__link:focus:after {
+    background: @basic_white;
+    transition: all .2s;
+  }
 }
