@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   background-color: @special_pink;
+  overflow: hidden;
 }
 
 .stages-of-work__container {
@@ -72,6 +73,8 @@
   border: 1px solid @basic_white;
   border-radius: 10px;
   padding: 20px 0;
+  opacity: 0;
+  left: 120%;
 
   @media (min-width: @tablet_width) {
     border: 1.5px solid @basic_white;
@@ -91,6 +94,16 @@
   }
 }
 
+@media (min-width: @laptop_width) {
+  .stages-of-work__item:nth-child(1) {
+    left: -120%;
+  }
+
+  .stages-of-work__item:nth-child(2) {
+    left: 0;
+  }
+}
+
 .stages-of-work__item:not(:nth-child(1)) {
   margin-top: 25px;
 
@@ -100,6 +113,22 @@
 
   @media (min-width: @laptop_width) {
     margin-top: 0;
+  }
+}
+
+.stages-of-work__item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 12px @translucent_black, 0 16px 20px @translucent_black;
+}
+
+.stages-of-work__item--animation:nth-child(n) {
+  opacity: 1;
+  left: 0;
+  top: 0;
+  transition: all .5s ease;
+
+  @media (min-width: @laptop_width) {
+    transition: all .8s ease;
   }
 }
 
@@ -200,6 +229,8 @@
 .stages-of-work__subitem {
   position: relative;
   padding-right: 20px;
+  left: 120%;
+  opacity: 0;
 
   .font-normal;
   font-size: 1em;
@@ -221,8 +252,44 @@
   }
 }
 
+@media (min-width: @laptop_width) {
+  .stages-of-work__item:nth-child(1) .stages-of-work__subitem {
+    left: -120%;
+  }
+
+  .stages-of-work__item:nth-child(2) .stages-of-work__subitem {
+    left: 0;
+  }
+}
+
+.stages-of-work__subitem:nth-child(1) {
+  transition: all .5s ease .5s;
+}
+
+.stages-of-work__subitem:nth-child(2) {
+  transition: all .5s ease .7s;
+}
+
+.stages-of-work__subitem:nth-child(3) {
+  transition: all .5s ease .9s;
+}
+
+.stages-of-work__subitem:nth-child(4) {
+  transition: all .5s ease 1.1s;
+}
+
+.stages-of-work__subitem:nth-child(5) {
+  transition: all .5s ease 1.3s;
+}
+
+
 .stages-of-work__subitem:not(:nth-child(1)) {
   margin-top: 8px;
+}
+
+.stages-of-work__item--animation:nth-child(n) .stages-of-work__subitem {
+  left: 0;
+  opacity: 1;
 }
 
 .stages-of-work__subitem::before {

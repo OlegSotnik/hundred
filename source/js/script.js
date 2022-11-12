@@ -204,3 +204,34 @@ scrollUp.addEventListener('click', () => {
 });
 
 updateDashoffset();
+
+
+
+// Анимация блока stages-of-work
+
+let stagesOfWorkItems = document.querySelectorAll('.stages-of-work__item');
+
+window.addEventListener('scroll', animOnScroll);
+function animOnScroll() {
+  for (let index = 0; index < stagesOfWorkItems.length; index++) {
+    const stagesOfWorkItem = stagesOfWorkItems[index];
+
+    const stagesOfWorkItemHeight = stagesOfWorkItem.offsetHeight;
+    const stagesOfWorkItemOffset = offsett(stagesOfWorkItem).top;
+
+    if (scrollY > stagesOfWorkItemOffset - stagesOfWorkItemHeight) {
+      stagesOfWorkItem.classList.add('stages-of-work__item--animation');
+    }
+  }
+}
+
+function offsett(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
+
+setTimeout(() => {
+  animOnScroll();
+}, 50);

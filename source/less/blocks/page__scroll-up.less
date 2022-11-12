@@ -97,12 +97,14 @@
 }
 
 .page__scroll-up:hover {
-  transform: scale(1.1);
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 4px 12px @translucent_black, 0 16px 20px @translucent_black;
 }
 
+.page__scroll-up:focus,
 .page__scroll-up:active {
-  opacity: .5;
-  transform: scale(.9);
+  transform: scale(1) translateY(0px);
+  box-shadow: none;
 }
 
 .page__scroll-up--active {
