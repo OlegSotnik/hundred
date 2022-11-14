@@ -126,6 +126,14 @@
   }
 }
 
+.footer__item-contact:active,
+.footer__item-contact:focus {
+  @media (min-width: @laptop_width) {
+    opacity: .6;
+    transition: .2s;
+  }
+}
+
 .footer__item-contact:not(:nth-child(1)) {
   margin-left: 17px;
 

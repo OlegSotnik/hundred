@@ -209,18 +209,23 @@ updateDashoffset();
 
 // Анимация блока stages-of-work
 
-let stagesOfWorkItems = document.querySelectorAll('.stages-of-work__item');
+
+let animations = document.querySelectorAll('.__animation');
 
 window.addEventListener('scroll', animOnScroll);
 function animOnScroll() {
-  for (let index = 0; index < stagesOfWorkItems.length; index++) {
-    const stagesOfWorkItem = stagesOfWorkItems[index];
+  for (let index = 0; index < animations.length; index++) {
+    const animation = animations[index];
 
-    const stagesOfWorkItemHeight = stagesOfWorkItem.offsetHeight;
-    const stagesOfWorkItemOffset = offsett(stagesOfWorkItem).top;
+    const animationHeight = animation.offsetHeight;
+    const animationOffset = offsett(animation).top;
 
-    if (scrollY > stagesOfWorkItemOffset - stagesOfWorkItemHeight) {
+    if (scrollY > animationOffset - animationHeight) {
+      const stagesOfWorkItems = document.querySelectorAll('.stages-of-work__item');
+      for (let index = 0; index < stagesOfWorkItems.length; index++) {
+        const stagesOfWorkItem = stagesOfWorkItems[index];
       stagesOfWorkItem.classList.add('stages-of-work__item--animation');
+      }
     }
   }
 }
