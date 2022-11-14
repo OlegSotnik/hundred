@@ -210,25 +210,6 @@ updateDashoffset();
 // Анимация блока stages-of-work
 
 
-let animations = document.querySelectorAll('.__animation');
-
-window.addEventListener('scroll', animOnScroll);
-function animOnScroll() {
-  for (let index = 0; index < animations.length; index++) {
-    const animation = animations[index];
-
-    const animationHeight = animation.offsetHeight;
-    const animationOffset = offsett(animation).top;
-
-    if (scrollY > animationOffset - animationHeight) {
-      const stagesOfWorkItems = document.querySelectorAll('.stages-of-work__item');
-      for (let index = 0; index < stagesOfWorkItems.length; index++) {
-        const stagesOfWorkItem = stagesOfWorkItems[index];
-      stagesOfWorkItem.classList.add('stages-of-work__item--animation');
-      }
-    }
-  }
-}
 
 function offsett(el) {
   const rect = el.getBoundingClientRect(),
@@ -237,6 +218,42 @@ function offsett(el) {
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
 
+let stagesOfWorkItems = document.querySelectorAll('.stages-of-work__item');
+
+window.addEventListener('scroll', animOnScroll);
+function animOnScroll() {
+  for (let index = 0; index < stagesOfWorkItems.length; index++) {
+    const animation = stagesOfWorkItems[index];
+
+    const animationHeight = animation.offsetHeight;
+    const animationOffset = offsett(animation).top;
+
+    if (scrollY > animationOffset - animationHeight) {
+      animation.classList.add('stages-of-work__item--animation');
+    }
+  }
+}
+
 setTimeout(() => {
   animOnScroll();
+}, 50);
+
+let aboutUsItems = document.querySelectorAll('.about-us__item');
+
+window.addEventListener('scroll', animOnScrollAboutUs);
+function animOnScrollAboutUs() {
+  for (let index = 0; index < aboutUsItems.length; index++) {
+    const animation = aboutUsItems[index];
+
+    const animationHeight = animation.offsetHeight;
+    const animationOffset = offsett(animation).top;
+
+    if (scrollY > animationOffset - window.screen.height / 1.5) {
+      animation.classList.add('about-us__item--animation');
+    }
+  }
+}
+
+setTimeout(() => {
+  animOnScrollAboutUs();
 }, 50);

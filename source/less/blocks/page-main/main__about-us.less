@@ -299,6 +299,7 @@
   position: relative;
   width: calc(~'100% - 20px');
   margin: 0 10px 0 20px;
+  opacity: 0;
 
   .font-normal;
   font-size: .9em;
@@ -362,4 +363,24 @@
     height: 6px;
     top: 10px;
   }
+}
+
+.about-us__item--animation:nth-child(1){
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.about-us__item--animation:nth-child(2){
+  opacity: 1;
+  transition: all 1s ease .2s;
+}
+
+.about-us__item--animation:nth-child(3){
+  opacity: 1;
+  transition: all 1s ease .4s;
+}
+
+.about-us__item--animation:nth-child(4){
+  opacity: 1;
+  transition: all 1s ease .6s;
 }
