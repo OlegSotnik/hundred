@@ -44,6 +44,7 @@
   align-items: center;
   border: 1px solid @special_blue;
   border-radius: 10px;
+  transition: all .5s ease;
 
   @media (min-width: @tablet_width) {
     width: 46%;
@@ -57,11 +58,17 @@
     border: 2px solid @special_blue;
     border-radius: 17px;
     margin: 35px 0 0 0;
+    transition: all .8s ease;
   }
 
   @media (min-width: @desktop_width) {
     margin: 45px 0 0 0;
   }
+}
+
+.case__box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 12px @translucent_black, 0 16px 20px @translucent_black;
 }
 
 .case__box--easy {
