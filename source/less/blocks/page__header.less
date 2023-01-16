@@ -234,6 +234,7 @@
   padding: 1em;
   text-align: center;
   text-decoration: none;
+  transition: all .5s;
 
   @media (min-width: @modile_xl_width) {
     font-size: 1.1em;
@@ -259,13 +260,12 @@
 .nav-item__link:hover {
   color: @basic_blue;
   transform: scale(1.1);
-  transition: all .5s;
 }
 
 .nav-item__link:active {
   color: @basic_white;
   transform: scale(.9);
-  transition: all .2s;
+  transition: all .1s;
 }
 
 @media (min-width: @laptop_width) {
